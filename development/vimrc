@@ -1,0 +1,21 @@
+call plug#begin()
+
+"Base
+Plug 'preservim/nerdtree'
+Plug 'bling/vim-airline'
+Plug 'preservim/nerdcommenter'
+Plug 'mbbill/undotree'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'romainl/vim-cool'
+Plug 'tpope/vim-surround'
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+Plug 'skanehira/docker.vim'
+Plug 'skanehira/docker-compose.vim'
+
+
+call plug#end()
+
+"Base
+nohl
+set incsearch
+set mouse=a

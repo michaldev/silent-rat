@@ -1,11 +1,15 @@
 from abc import abstractmethod, ABC
 
+
 class Communication(ABC):
-    @abstractmethod
-    async def initialize():
+    @property
+    def client(self):
         raise NotImplementedError
 
     @abstractmethod
-    async def send_message(message: str):
+    async def initialize(self):
         raise NotImplementedError
 
+    @abstractmethod
+    async def send_message(self, message: str):
+        raise NotImplementedError

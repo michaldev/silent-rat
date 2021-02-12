@@ -3,10 +3,9 @@ from abc import abstractmethod, ABC
 
 class Strategy(ABC):
     @abstractmethod
-    def setUp(self):
+    def set_up(self):
         pass
 
     @abstractmethod
     def strategy(self):
         pass
-

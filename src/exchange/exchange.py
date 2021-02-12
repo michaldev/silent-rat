@@ -1,15 +1,15 @@
 from abc import abstractmethod, ABC
 
+
 class Exchange(ABC):
     @abstractmethod
-    async def connect():
+    async def connect(self):
         raise NotImplementedError
 
     @abstractmethod
-    async def buy(price: float):
+    async def buy(self, price: float):
         raise NotImplementedError
 
     @abstractmethod
-    async def sell(price: float):
+    async def sell(self, price: float):
         raise NotImplementedError
-

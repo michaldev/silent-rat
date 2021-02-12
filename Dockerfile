@@ -22,3 +22,5 @@ RUN apt update && apt install -y python3-dev
 RUN pip install poetry && poetry config virtualenvs.create false && poetry install
 
 COPY . /code/
+
+EXPOSE 8000

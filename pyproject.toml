@@ -11,6 +11,7 @@ fastapi = "^0.63.0"
 uvicorn = "^0.13.3"
 pydantic = "^1.7.3"
 Telethon = "^1.19.5"
+python-binance = "^0.7.9"
 
 [tool.poetry.dev-dependencies]
 pylint = "^2.6.0"

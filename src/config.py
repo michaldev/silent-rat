@@ -7,6 +7,8 @@ class Settings(BaseSettings):
     telegram_api_id: int
     telegram_api_hash: str
     telegram_receiver_username: str
+    binance_api_key: str
+    binance_api_secret: str
 
 
 @lru_cache()

@@ -1,7 +1,9 @@
 import uvicorn
 from fastapi import FastAPI, Depends
 
-from src.communication import initialized_communication
+from .config import get_config
+from .exchange import initialized_exchange
+from .communication import initialized_communication
 from .auth import verify_client_key
 from .views import router as views_router
 
@@ -13,6 +15,8 @@ app.include_router(views_router, prefix='',
 
 @app.on_event("startup")
 async def startup():
+    await initialized_exchange.connect(
+        api_key=get_config().binance_api_key, api_secret=get_config().binance_api_secret)
     await initialized_communication.initialize()
 
 

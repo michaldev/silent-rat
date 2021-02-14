@@ -1,7 +1,7 @@
+from src.communication.impl.cli import Cli
 from src.communication.communication import Communication
-from src.communication.telegram import Telegram
 
-initialized_communication = Telegram()
+initialized_communication = Cli()
 
 
 async def get_communication() -> Communication:

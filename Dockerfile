@@ -20,6 +20,7 @@ COPY poetry.lock /
 COPY pyproject.toml .
 RUN apt update && apt install -y python3-dev
 RUN pip install poetry && poetry config virtualenvs.create false && poetry install
+RUN pip install websocket_client
 
 COPY . /code/
 

@@ -13,7 +13,6 @@ router = APIRouter()
 async def run_trade(communication: Communication = Depends(get_communication),
                     exchange: Exchange = Depends(get_exchange)):
     await communication.send_message(message='starting trading')
-    hist = exchange.client.get_historical_klines("REEFUSDT", Client.KLINE_INTERVAL_1MINUTE, "1 day ago UTC")
+    await exchange.start_socket()
 
-    await communication.send_message(message=hist)
 

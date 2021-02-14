@@ -1,4 +1,4 @@
-from .binance import Binance
+from .impl.binance import Binance
 from .exchange import Exchange
 
 initialized_exchange = Binance()

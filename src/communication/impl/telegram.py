@@ -1,7 +1,7 @@
 from telethon import TelegramClient
 
-from src.communication.communication import Communication
-from src.config import get_config
+from ..communication import Communication
+from ...config import get_config
 
 
 class Telegram(Communication):

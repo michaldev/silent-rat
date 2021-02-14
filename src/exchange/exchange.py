@@ -1,5 +1,7 @@
 from abc import abstractmethod, ABC
 
+from .exchange_message import ExchangeMessage
+
 
 class Exchange(ABC):
     @property
@@ -11,9 +13,17 @@ class Exchange(ABC):
         raise NotImplementedError
 
     @abstractmethod
-    async def buy(self, price: float):
+    async def buy(self, quantity: str, symbol: str, price: float):
         raise NotImplementedError
 
     @abstractmethod
-    async def sell(self, price: float):
+    async def sell(self, quantity: str, symbol: str, price: float):
+        raise NotImplementedError
+
+    @abstractmethod
+    async def start_socket(self):
+        raise NotImplementedError
+
+    @abstractmethod
+    async def on_message(self, ws, message) -> ExchangeMessage:
         raise NotImplementedError

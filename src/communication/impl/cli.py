@@ -1,4 +1,4 @@
-from src.communication.communication import Communication
+from ..communication import Communication
 
 
 class Cli(Communication):

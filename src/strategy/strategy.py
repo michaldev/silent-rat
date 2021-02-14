@@ -7,7 +7,7 @@ class Strategy(ABC):
         pass
 
     @abstractmethod
-    def strategy(self):
+    def run_strategy(self):
         pass
 
 
@@ -20,5 +20,5 @@ class RSI(Strategy):
     def set_up(self):
         pass
 
-    def strategy(self):
+    def run_strategy(self):
         pass
